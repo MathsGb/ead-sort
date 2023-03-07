@@ -6,7 +6,7 @@ public class BubbleSort implements Sorter{
 
     @Override
     public int[] sort(final int[] array2) {
-        int [] sorted = array2.clone();
+        int [] sorted = array2;
         for(int i = 0; i<sorted.length; i++){
             for(int j = 0; j<sorted.length-1; j++){
                 if(sorted[j] > sorted[j + 1]){
