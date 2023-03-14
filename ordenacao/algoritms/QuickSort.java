@@ -8,6 +8,7 @@ public class QuickSort implements Sorter {
     public int[] sort(int[] elements) {
         int [] sorted = elements;
         int d = 0;
+
         for(int i = 1 ;  i < sorted.length ; i++){
             if(sorted[0] > sorted[i]){
                 d++;
@@ -21,13 +22,13 @@ public class QuickSort implements Sorter {
         sorted[d] = inicio;  // O que se espera da lista até agora [0,1,2,6,4,8,10]
 
         
-            for(int i=0; i < sorted[d-1]; i++){
-                if(sorted[i] > sorted[i+1]){
-                    int temporário = sorted[i];
-                    sorted[i] = sorted[i+1];
-                    sorted[i+1] = temporário;
-                }
+        for(int i = 0; i < sorted[d-1]; i++){
+            if(sorted[i] > sorted[i+1]){
+                int temporário = sorted[i];
+                sorted[i] = sorted[i+1];
+                sorted[i+1] = temporário;
             }
+        }
         
 
         for(int i= d+1; i < sorted.length - 1 ; i++){
@@ -45,6 +46,7 @@ public class QuickSort implements Sorter {
     public String getName() {
         return "QuickSort";
     }
+
     public static void main(String[] args) {
         QuickSort R = new QuickSort();
         int[] lista = {14,32,2,6,4,1,0,8,10};
