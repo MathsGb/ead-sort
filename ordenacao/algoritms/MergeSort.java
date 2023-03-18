@@ -13,7 +13,7 @@ public class MergeSort implements Sorter {
             int[] esquerda = new int[meio];  
             int[] direita = new int[elements.length - meio];
 
-            // Colocando elementos dentro de cada
+            // Colocando elementos dentro de cada array repartido.
             for(int i = 0; i < meio; i++)     // Parte esquerda
             {
                 esquerda[i] = elements[i];  
@@ -24,7 +24,7 @@ public class MergeSort implements Sorter {
                 direita[i - meio] = elements[i];
             }
 
-            Repartir(esquerda);
+            Repartir(esquerda); // recurssão para dividir em cada vez menor.
             Repartir(direita);
             juntar(elements, esquerda, direita);
 
@@ -65,7 +65,7 @@ public class MergeSort implements Sorter {
             indiceDir++;
             indiceFinal++;
         }
-
+        // A ideia é que nesse ponto indiceFinal = indiceDir + indiceEsq (Ou seja um array com todo os elementos)
         return elements;
     }
 
