@@ -56,6 +56,4 @@ public class InsertionSort implements Sorter{
         System.out.println(lista[7]);
 
     }
-
-
 }
